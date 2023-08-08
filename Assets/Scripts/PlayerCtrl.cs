@@ -10,23 +10,30 @@ public class PlayerCtrl : MonoBehaviour
         get { return isOnSite; }
     }
 
-    [SerializeField]  private float gravitation;
+    [SerializeField] private float gravitation;
+    public AnimatorCtrl animatorCtrl;
+    [SerializeField] private GameObject weaponManager;
     Rigidbody2D rb;
-    SpriteRenderer sr;
-    // Start is called before the first frame update
+ 
     void Start()
     {
         isOnSite= true;
-        rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
-        sr.enabled = false;
-        
+        rb = GetComponent<Rigidbody2D>();  
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (weaponManager.activeSelf)
+        {
+            animatorCtrl.transform.GetChild(0).gameObject.SetActive(false);
+            animatorCtrl.transform.GetChild(1).gameObject.SetActive(true);
+        }
+        else
+        {
+            animatorCtrl.transform.GetChild(1).gameObject.SetActive(false);
+            animatorCtrl.transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
     private void OnTriggerExit2D(Collider2D col)
     {

@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMoving : PlayerCtrl
+public class PlayerMoving : MonoBehaviour
 {
     [SerializeField] protected float speed;
     [SerializeField] PlayerCtrl playerCtrl;
-    [SerializeField] Animator animatorCtrl;
+    public AnimatorCtrl animatorCtrl;
     public float Speed
     {
         get { return speed; }
         set { speed = value; }
     }
     private Vector3 input;
+    public Vector3 GetInput
+    {
+        get { return input; }
+    }
     void Start()
     {
         
@@ -23,9 +27,7 @@ public class PlayerMoving : PlayerCtrl
         if (!playerCtrl.IsOnSite) return;
         input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
         playerCtrl.transform.position += input * speed * Time.deltaTime;
-        if (Input.GetAxis("Horizontal") > 0f) playerCtrl.transform.localScale = new Vector3(1,1,1);
-        else if (Input.GetAxis("Horizontal") < 0f) playerCtrl.transform.localScale = new Vector3(-1, 1, 1);
-        if (input == Vector3.zero) animatorCtrl.SetBool("Walk", false);
-        else animatorCtrl.SetBool("Walk", true);
+        if (Input.GetAxis("Horizontal") > 0f) animatorCtrl.transform.localScale = new Vector3(1,1,1);
+        else if (Input.GetAxis("Horizontal") < 0f) animatorCtrl.transform.localScale = new Vector3(-1, 1, 1);
     }
 }

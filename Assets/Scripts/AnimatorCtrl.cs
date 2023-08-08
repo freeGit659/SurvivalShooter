@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class AnimatorCtrl : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    SpriteRenderer sr;
     void Start()
     {
-        
+        sr = GetComponent<SpriteRenderer>();
+        sr.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        animator = GetComponentInChildren<Animator>();
+
     }
 }

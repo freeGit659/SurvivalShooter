@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Border
+  - Weapon
+  - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
