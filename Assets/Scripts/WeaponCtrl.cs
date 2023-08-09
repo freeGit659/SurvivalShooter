@@ -8,13 +8,15 @@ public class WeaponCtrl : MonoBehaviour
     [SerializeField] GameObject muzzle;
     [SerializeField] Transform bulletMagazine;
     [SerializeField] Transform firePos;
+    [SerializeField] AudioSource shootingSound;
+    [SerializeField] ShakeCtrl shakeCtrl;
 
     [SerializeField] float timeFire;
     [SerializeField] float bulletForce;
     private float _timeFire;
     void Start()
     {
-        
+        shootingSound = GetComponentInChildren<AudioSource>();
     }
     void Update()
     {
@@ -37,6 +39,10 @@ public class WeaponCtrl : MonoBehaviour
     }
     private void FireBullet()
     {
+        shootingSound.Play();
+
+        shakeCtrl.LowShake();
+
         _timeFire = timeFire;
         GameObject bulletTmp = Instantiate(bullet, firePos.position, Quaternion.identity, bulletMagazine);
         Instantiate(muzzle, firePos.position, transform.rotation, transform);
