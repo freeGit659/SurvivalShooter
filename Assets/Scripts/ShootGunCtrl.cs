@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponCtrl : MonoBehaviour
+public class ShootGunCtrl : MonoBehaviour
 {
     [SerializeField] GameObject bullet;
     [SerializeField] GameObject muzzle;
     [SerializeField] Transform bulletMagazine;
-    [SerializeField] Transform firePos;
+    [SerializeField] Transform firePos1;
+    [SerializeField] Transform firePos2;
+    [SerializeField] Transform firePos3;
     [SerializeField] AudioSource shootingSound;
     [SerializeField] ShakeCtrl shakeCtrl;
 
@@ -44,8 +46,9 @@ public class WeaponCtrl : MonoBehaviour
         shakeCtrl.LowShake();
 
         _timeFire = timeFire;
-        GameObject bulletTmp = Instantiate(bullet, firePos.position, firePos.rotation, bulletMagazine);
-        Instantiate(muzzle, firePos.position, transform.rotation, transform);
-;
+        GameObject bulletTmp1 = Instantiate(bullet, firePos1.position, firePos1.rotation, bulletMagazine);
+        GameObject bulletTmp2 = Instantiate(bullet, firePos1.position, firePos2.rotation, bulletMagazine);
+        GameObject bulletTmp3 = Instantiate(bullet, firePos1.position, firePos3.rotation, bulletMagazine);
+        Instantiate(muzzle, firePos2.position, transform.rotation, transform);
     }
 }

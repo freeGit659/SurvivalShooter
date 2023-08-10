@@ -8,6 +8,7 @@ public class EnemyCtrl : MonoBehaviour
     private float speed;
     [SerializeField] float maxSpeed;
     [SerializeField] float timeFollow;
+    [SerializeField] DataManager dataManager;
     Animator an;
 
     private bool isDeath;
@@ -36,9 +37,11 @@ public class EnemyCtrl : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isDeath) return;
         if (collision.gameObject.CompareTag("Bullet"))
         {
             isDeath= true;
+            DataManager.score += 1;
             an.SetBool("Death", true);
             Destroy(gameObject, 1f);
         }   
