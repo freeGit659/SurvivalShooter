@@ -13,6 +13,8 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private float gravitation;
     public AnimatorCtrl animatorCtrl;
     [SerializeField] private GameObject weaponManager;
+    public HealthCtr healthCtrl;
+    [SerializeField] private DataManager DataManager;
     Rigidbody2D rb;
  
     void Start()

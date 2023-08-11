@@ -8,7 +8,6 @@ public class EnemyCtrl : MonoBehaviour
     private float speed;
     [SerializeField] float maxSpeed;
     [SerializeField] float timeFollow;
-    [SerializeField] DataManager dataManager;
     Animator an;
 
     private bool isDeath;
@@ -45,5 +44,14 @@ public class EnemyCtrl : MonoBehaviour
             an.SetBool("Death", true);
             Destroy(gameObject, 1f);
         }   
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isDeath) return;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            DataManager.playerHealth -= 1;
+            Debug.Log("Da va cham");
+        }
     }
 }

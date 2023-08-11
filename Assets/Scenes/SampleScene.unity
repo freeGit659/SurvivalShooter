@@ -1289,7 +1289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb94d887193b3f468959d438b74c49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCtrl: {fileID: 2104934430}
   m_score: 0
+  playerHeal: 0
 --- !u!4 &803628683
 Transform:
   m_ObjectHideFlags: 0
@@ -1305,6 +1307,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &804511363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 804511364}
+  - component: {fileID: 804511365}
+  m_Layer: 0
+  m_Name: HealthCtr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &804511364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804511363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2104934427}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &804511365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804511363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1c39bf45daf664b9994bdc3b3052cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &822209162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,6 +2315,7 @@ Transform:
   - {fileID: 1135674210}
   - {fileID: 1769727963}
   - {fileID: 348348483}
+  - {fileID: 804511364}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2324,6 +2371,8 @@ MonoBehaviour:
   gravitation: 10
   animatorCtrl: {fileID: 1769727964}
   weaponManager: {fileID: 348348482}
+  healthCtrl: {fileID: 804511365}
+  DataManager: {fileID: 803628682}
 --- !u!1 &2136178741
 GameObject:
   m_ObjectHideFlags: 0
