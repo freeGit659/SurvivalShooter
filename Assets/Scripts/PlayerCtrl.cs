@@ -15,12 +15,16 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private GameObject weaponManager;
     public HealthCtr healthCtrl;
     [SerializeField] private DataManager DataManager;
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private GameObject gameOver;
+    Collider2D collider2D;
     Rigidbody2D rb;
  
     void Start()
     {
         isOnSite= true;
         rb = GetComponent<Rigidbody2D>();  
+        collider2D= GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -36,6 +40,11 @@ public class PlayerCtrl : MonoBehaviour
             animatorCtrl.transform.GetChild(1).gameObject.SetActive(false);
             animatorCtrl.transform.GetChild(0).gameObject.SetActive(true);
         }
+        if (healthCtrl.GetHealth() <= 0)
+        {
+            gameManager.Pause();
+            gameOver.SetActive(true);
+        }
     }
     private void OnTriggerExit2D(Collider2D col)
     {
@@ -44,5 +53,18 @@ public class PlayerCtrl : MonoBehaviour
             isOnSite = false;
             rb.gravityScale = 2;
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy")) StartCoroutine(GetHurt());
+    }
+    public IEnumerator GetHurt()
+    {
+        animatorCtrl.GetComponentInChildren<Animator>().SetLayerWeight(1, 1);
+        collider2D.enabled = false;
+        yield return new WaitForSeconds(3);
+        animatorCtrl.GetComponentInChildren<Animator>().SetLayerWeight(1, 0);
+        collider2D.enabled = true;
+        Debug.Log("gethurt");
     }
 }

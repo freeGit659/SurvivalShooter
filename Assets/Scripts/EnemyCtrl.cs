@@ -51,7 +51,6 @@ public class EnemyCtrl : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             DataManager.playerHealth -= 1;
-            Debug.Log("Da va cham");
         }
     }
 }

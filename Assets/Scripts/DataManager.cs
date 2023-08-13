@@ -12,7 +12,8 @@ public class DataManager : MonoBehaviour
 
     void Start()
     {
-        playerHealth = playerCtrl.healthCtrl.GetHealth();
+        score= 0;
+        playerHealth= playerCtrl.healthCtrl.GetMaxHealth();
     }
 
     // Update is called once per frame
