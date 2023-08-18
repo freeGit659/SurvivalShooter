@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5656800319138027312}
-  - component: {fileID: 2303125446356831325}
+  - component: {fileID: -422322201255887017}
   - component: {fileID: 6802059395657672784}
   - component: {fileID: 9217124356625207299}
   - component: {fileID: 2602339004328851213}
   m_Layer: 0
-  m_Name: bullet
+  m_Name: SniperBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2303125446356831325
+--- !u!114 &-422322201255887017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,10 +44,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5891744137591952061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fc9f3ab9d32b9340bec0df73bac8548, type: 3}
+  m_Script: {fileID: 11500000, guid: d0d77207d6bdd4a499ea2455b1165e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 1
+  lifeTime: 5
+  speed: 300
 --- !u!212 &6802059395657672784
 SpriteRenderer:
   m_ObjectHideFlags: 0

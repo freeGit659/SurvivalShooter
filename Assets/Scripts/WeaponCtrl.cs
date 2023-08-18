@@ -4,48 +4,47 @@ using UnityEngine;
 
 public class WeaponCtrl : MonoBehaviour
 {
-    [SerializeField] GameObject bullet;
-    [SerializeField] GameObject muzzle;
-    [SerializeField] Transform bulletMagazine;
-    [SerializeField] Transform firePos;
-    [SerializeField] AudioSource shootingSound;
-    [SerializeField] ShakeCtrl shakeCtrl;
-
-    [SerializeField] float timeFire;
-    [SerializeField] float bulletForce;
-    private float _timeFire;
+    [SerializeField] GameObject[] weapons;
     void Start()
     {
-        shootingSound = GetComponentInChildren<AudioSource>();
+
     }
     void Update()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 lookDir = mousePos - transform.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
 
-        Quaternion rotation = Quaternion.Euler(0f, 0f, angle);
-        transform.rotation = rotation;
-
-        if (transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270)
-            transform.localScale = new Vector3(1, -1, 0);
-        else transform.localScale = new Vector3(1, 1, 0);
-
-        _timeFire -= Time.deltaTime;
-        if (Input.GetMouseButton(0) && _timeFire < 0)
-        {
-            FireBullet();
-        }
     }
-    private void FireBullet()
+    protected virtual void DefaultFire(GameObject bullet, Transform[] firePosition, Transform bulletMagazine, 
+        GameObject muzzle, Transform gunTransfrom, AudioSource shootingSound, ShakeCtrl shakeCtrl )
     {
         shootingSound.Play();
 
         shakeCtrl.LowShake();
-
-        _timeFire = timeFire;
-        GameObject bulletTmp = Instantiate(bullet, firePos.position, firePos.rotation, bulletMagazine);
-        Instantiate(muzzle, firePos.position, transform.rotation, transform);
+        foreach(Transform pos in firePosition)
+        {
+            GameObject bulletTmp = Instantiate(bullet, pos.position, pos.rotation, bulletMagazine);
+        } 
+        //Instantiate(muzzle, pos[].position, transform.rotation, transform);
 ;
+    }
+    public void ActiveWeapon(string input)
+    {
+            switch(input)
+            {
+            case "rifle":
+                weapons[0].SetActive(true);
+                weapons[1].SetActive(false);
+                weapons[2].SetActive(false);
+                break;
+            case "shootgun":
+                weapons[0].SetActive(false);
+                weapons[1].SetActive(true);
+                weapons[2].SetActive(false);
+                break;
+            case "sniper":
+                weapons[0].SetActive(false);
+                weapons[1].SetActive(false);
+                weapons[2].SetActive(true);
+                break;
+        }
     }
 }

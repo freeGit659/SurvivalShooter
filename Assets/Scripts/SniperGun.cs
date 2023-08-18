@@ -2,22 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootGunCtrl : WeaponCtrl
+public class SniperGun : WeaponCtrl
 {
     [SerializeField] GameObject bullet;
     [SerializeField] GameObject muzzle;
     [SerializeField] Transform bulletMagazine;
     [SerializeField] AudioSource shootingSound;
     [SerializeField] ShakeCtrl shakeCtrl;
-    [SerializeField] Transform[] firePosition;
 
     [SerializeField] float timeFire;
-    [SerializeField] float bulletForce;
+    [SerializeField] Transform[] firePosition;
     private float _timeFire;
-    
     void Start()
     {
-        shootingSound = GetComponent<AudioSource>();
+        shootingSound = GetComponentInChildren<AudioSource>();
     }
     void Update()
     {
@@ -40,5 +38,4 @@ public class ShootGunCtrl : WeaponCtrl
             _timeFire = timeFire;
         }
     }
-
 }

@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class BulletCtrl : MonoBehaviour
 {
-    [SerializeField] float lifeTime;
-    //[SerializeField] WeaponCtrl weaponCtrl;
-    Rigidbody2D rb;
     void Start()
     {
-        Destroy(gameObject, lifeTime);
-        rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(transform.right * 100, ForceMode2D.Impulse);
+
     }
 
     // Update is called once per frame
@@ -19,11 +14,10 @@ public class BulletCtrl : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void BulletFire(Rigidbody2D rb, Transform transform, float speed, GameObject gameObject, float lifeTime)
     {
-       if(collision.gameObject.CompareTag("Enemy"))
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject, lifeTime);
+        rb = GetComponent<Rigidbody2D>();
+        rb.AddForce(transform.right * speed, ForceMode2D.Impulse);
     }
 }
