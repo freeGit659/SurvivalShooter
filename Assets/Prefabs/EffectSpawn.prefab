@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6954288630385893635}
+  - component: {fileID: -9004286328923807341}
   - component: {fileID: 585049526255028121}
   - component: {fileID: 3513520666471976716}
-  - component: {fileID: 4068802115512224943}
   - component: {fileID: 3985361883916620653}
   m_Layer: 0
   m_Name: EffectSpawn
@@ -35,6 +35,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-9004286328923807341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088656107052555869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697f960d7060ca64696e7daec937ae19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &585049526255028121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -108,19 +120,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4068802115512224943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088656107052555869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fc9f3ab9d32b9340bec0df73bac8548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeTime: 1
 --- !u!50 &3985361883916620653
 Rigidbody2D:
   serializedVersion: 4

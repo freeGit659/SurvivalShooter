@@ -19,7 +19,8 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private GameObject gameOver;
     Collider2D collider2D;
     Rigidbody2D rb;
- 
+
+
     void Start()
     {
         isOnSite= true;

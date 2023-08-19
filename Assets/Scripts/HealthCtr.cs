@@ -10,7 +10,18 @@ public class HealthCtr : MonoBehaviour
     [SerializeField] private Sprite emptyHeart;
     [SerializeField] private PlayerCtrl player;
     private int currentHealth;
+    public int CurrentHealth
+    {
+        get { return currentHealth; }
+        set { currentHealth = value; }
+    }
+
     private int maxHealth;
+    public int MaxHealth
+    {
+        get { return maxHealth; }
+        set { maxHealth = value; }
+    }
     private void Awake()
     {
         maxHealth = 3;

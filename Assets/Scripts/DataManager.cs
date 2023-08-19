@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    [SerializeField] PlayerCtrl playerCtrl;
+    public PlayerCtrl playerCtrl;
+    [SerializeField] GameObject[] playerAnimation;
     public LevelScore levelScore;
     public WeaponCtrl weaponCtrl;
     public LevelManager levelManager;
@@ -17,7 +18,7 @@ public class DataManager : MonoBehaviour
     {
         score= 0;
         playerHealth= playerCtrl.healthCtrl.GetMaxHealth();
-        levelManager = GetComponentInChildren<LevelManager>();0
+        levelManager = GetComponentInChildren<LevelManager>();
     }
 
     // Update is called once per frame

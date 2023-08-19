@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public bool isGamePause;
     private void Start()
     {
-        Resume();
+        
     }
     public void Pause()
     {
@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     }
     public void Restart()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene("SampleScene");
     }
     public void Resume()

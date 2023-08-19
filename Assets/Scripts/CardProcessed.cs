@@ -5,6 +5,7 @@ using UnityEngine;
 public class CardProcessed : MonoBehaviour
 {
     [SerializeField] CardManager cardManager;
+    [SerializeField] LevelList levelList;
     void Start()
     {
         cardManager = GetComponentInParent<CardManager>();
@@ -36,13 +37,13 @@ public class CardProcessed : MonoBehaviour
         switch (cardManager.dataManager.levelScore.LevelCurrent)
         {
             case 1:
-                Level0SelectWeapon(card); 
+                Level1SelectWeapon(card);
                 break;
          
 
         }
     }
-    private void Level0SelectWeapon(int card)
+    private void Level1SelectWeapon(int card)
     {
         switch (card)
         {
@@ -57,4 +58,11 @@ public class CardProcessed : MonoBehaviour
                 break;
         }
     }
+    //private void Level2StatsUpgrade(int card)
+    //{
+    //    switch (card)
+    //    {
+    //        case 1:
+    //    }
+    //}
 }
