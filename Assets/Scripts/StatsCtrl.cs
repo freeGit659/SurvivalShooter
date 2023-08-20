@@ -25,6 +25,8 @@ public class StatsCtrl : MonoBehaviour
 
     void Update()
     {
-        
+        movingCtrl.Speed= moveSpeed;
+        healthCurrent = healthCtr.CurrentHealth;
+        healthMax = healthCtr.MaxHealth;
     }
 }

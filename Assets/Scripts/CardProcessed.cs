@@ -6,6 +6,7 @@ public class CardProcessed : MonoBehaviour
 {
     [SerializeField] CardManager cardManager;
     [SerializeField] LevelList levelList;
+    [SerializeField] StatsCtrl  statsCtrl;
     void Start()
     {
         cardManager = GetComponentInParent<CardManager>();
@@ -39,6 +40,9 @@ public class CardProcessed : MonoBehaviour
             case 1:
                 Level1SelectWeapon(card);
                 break;
+            case 2:
+                Level2StatsUpgrade(card);
+                break;
          
 
         }
@@ -58,11 +62,22 @@ public class CardProcessed : MonoBehaviour
                 break;
         }
     }
-    //private void Level2StatsUpgrade(int card)
-    //{
-    //    switch (card)
-    //    {
-    //        case 1:
-    //    }
-    //}
+    private void Level2StatsUpgrade(int card)
+    {
+        switch (card)
+        {
+            case 1:
+                statsCtrl.speedFireDefault += (statsCtrl.speedFireDefault * 20) / 100;
+                break;
+            case 2:
+                statsCtrl.moveSpeed += (statsCtrl.moveSpeed * 20) / 100;
+                break;
+            case 3:
+                statsCtrl.healthMax += 1;
+                statsCtrl.healthCurrent += 1;
+                break;
+
+
+        }
+    }
 }
