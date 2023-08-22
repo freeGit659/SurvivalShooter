@@ -5,6 +5,8 @@ using UnityEngine;
 public class WeaponCtrl : MonoBehaviour
 {
     [SerializeField] GameObject[] weapons;
+    public StatsCtrl statsCtrl;
+    protected float fireSpeedDefault;
     void Start()
     {
 
@@ -16,6 +18,7 @@ public class WeaponCtrl : MonoBehaviour
     protected virtual void DefaultFire(GameObject bullet, Transform[] firePosition, Transform bulletMagazine, 
         GameObject muzzle, Transform gunTransfrom, AudioSource shootingSound, ShakeCtrl shakeCtrl )
     {
+        if (!DataManager.canDo) return;
         shootingSound.Play();
 
         shakeCtrl.LowShake();

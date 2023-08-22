@@ -9,7 +9,6 @@ public class RifleGun : WeaponCtrl
     [SerializeField] Transform bulletMagazine;
     [SerializeField] AudioSource shootingSound;
     [SerializeField] ShakeCtrl shakeCtrl;
-    [SerializeField] StatsCtrl statsCtrl;
 
     private float timeFire;
     [SerializeField] Transform[] firePosition;
@@ -17,11 +16,12 @@ public class RifleGun : WeaponCtrl
     void Start()
     {
         shootingSound = GetComponentInChildren<AudioSource>();
-        timeFire = statsCtrl.speedFireDefault;
+        timeFire = 1/statsCtrl.fireSpeed;
+        statsCtrl.fireDamage = 50;
     }
     void Update()
     {
-        timeFire = statsCtrl.speedFireDefault;
+        timeFire = 1/statsCtrl.fireSpeed;
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 lookDir = mousePos - transform.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;

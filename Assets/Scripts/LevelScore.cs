@@ -19,7 +19,7 @@ public class LevelScore : LevelManager
     // Update is called once per frame
     void Update()
     {
-        if (levelScore == DataManager.score)
+        if (DataManager.score >= levelScore)
         {
             levelScore *= 2;
             UpLevel();

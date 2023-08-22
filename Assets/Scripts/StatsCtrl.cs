@@ -12,21 +12,22 @@ public class StatsCtrl : MonoBehaviour
     [Header("Player Stats")]
     [Space(50)]
     public float moveSpeed;
-    public int healthCurrent;
-    public int healthMax;
-    public float speedFireDefault;
+    public int currentHP;
+    public int maxHP;
+    public float fireSpeed;
+    public float fireDamage;
+    public static float FireDamage;
 
     void Start()
     {
         moveSpeed = movingCtrl.Speed;
-        healthCurrent = healthCtr.CurrentHealth;
-        healthMax = healthCtr.MaxHealth;
+        currentHP = healthCtr.CurrentHealth;
+        maxHP = healthCtr.MaxHealth;
     }
 
     void Update()
     {
         movingCtrl.Speed= moveSpeed;
-        healthCurrent = healthCtr.CurrentHealth;
-        healthMax = healthCtr.MaxHealth;
+        FireDamage = fireDamage;
     }
 }

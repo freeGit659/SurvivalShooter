@@ -8,6 +8,8 @@ public class EnemyCtrl : MonoBehaviour
     private float speed;
     [SerializeField] float maxSpeed;
     [SerializeField] float timeFollow;
+    [SerializeField] float maxHP;
+    private float currentHP;
     Animator an;
 
     private bool isDeath;
@@ -17,6 +19,7 @@ public class EnemyCtrl : MonoBehaviour
         timeFollow = Random.Range(1f,2f);
         an = GetComponent<Animator>();
         isDeath = false;
+        currentHP = maxHP;
     }
 
     void Update()
@@ -33,16 +36,14 @@ public class EnemyCtrl : MonoBehaviour
             timeFollow = Random.Range(1f, 2f);
         }
         timeFollow -= Time.deltaTime;
+        Death();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isDeath) return;
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            isDeath= true;
-            DataManager.score += 1;
-            an.SetBool("Death", true);
-            Destroy(gameObject, 1f);
+            currentHP -= StatsCtrl.FireDamage;
         }   
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -52,5 +53,13 @@ public class EnemyCtrl : MonoBehaviour
         {
             DataManager.playerHealth -= 1;
         }
+    }
+    private void Death()
+    {
+        if (currentHP > 0) return;
+        isDeath = true;
+        DataManager.score += 1;
+        an.SetBool("Death", true);
+        Destroy(gameObject, 1f);
     }
 }

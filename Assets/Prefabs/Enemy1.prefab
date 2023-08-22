@@ -51,6 +51,7 @@ MonoBehaviour:
   player: {fileID: 0}
   maxSpeed: 1
   timeFollow: 0
+  maxHP: 100
 --- !u!212 &5920577953461207819
 SpriteRenderer:
   m_ObjectHideFlags: 0

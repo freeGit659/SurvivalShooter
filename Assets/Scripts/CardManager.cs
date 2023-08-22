@@ -8,6 +8,7 @@ public class CardManager : MonoBehaviour
     [SerializeField] CardProcessed cardProcessed;
     [SerializeField] UICardCtrl[] cardInfo;
     [SerializeField] LevelList levelList;
+    [SerializeField] GameObject panelCard;
     public DataManager dataManager;
     // Start is called before the first frame update
     void Start()
@@ -25,17 +26,26 @@ public class CardManager : MonoBehaviour
     {
         cardCanvas.SetActive(false);
         Time.timeScale = 1.0f;
+        DataManager.canDo = true;
         
     }
-    public void CardCalled()
+   public void CardCalled()
     {
+
+        StartCoroutine(ActivePanelCard());
         cardCanvas.SetActive(true);
-        Time.timeScale = 0f;
-        for(int i= 0; i < cardInfo.Length; i++)
+        int levelCurrentIndex = dataManager.levelScore.LevelCurrent - 1;
+        for (int i = 0; i < cardInfo.Length; i++)
         {
-            if (dataManager.levelScore.LevelCurrent == 1) cardInfo[i].SetInfo(levelList.levels[0].cardCtrl[i].sprite,levelList.levels[0].cardCtrl[i].infomationText);
-            if (dataManager.levelScore.LevelCurrent == 2) cardInfo[i].SetInfo(levelList.levels[1].cardCtrl[i].sprite, levelList.levels[1].cardCtrl[i].infomationText);
+            cardInfo[i].SetInfo(levelList.levels[levelCurrentIndex].cardCtrl[i].sprite, levelList.levels[levelCurrentIndex].cardCtrl[i].infomationText);
         }
-        
+    }
+    public IEnumerator ActivePanelCard()
+    {
+        DataManager.canDo = false;
+        panelCard.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 0f;
+        panelCard.SetActive(false);
     }
 }
