@@ -21,6 +21,7 @@ public class SniperGun : WeaponCtrl
     }
     void Update()
     {
+        if (!DataManager.canDo) return;
         timeFire = 3*(1/statsCtrl.fireSpeed);
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 lookDir = mousePos - transform.position;

@@ -31,6 +31,7 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (DataManager.canDo == false) return;
         if (weaponManager.activeSelf)
         {
             animatorCtrl.transform.GetChild(0).gameObject.SetActive(false);
@@ -43,6 +44,7 @@ public class PlayerCtrl : MonoBehaviour
         }
         if (healthCtrl.GetHealth() <= 0)
         {
+            DataManager.canDo = false;
             gameManager.Pause();
             gameOver.SetActive(true);
         }
@@ -61,11 +63,12 @@ public class PlayerCtrl : MonoBehaviour
     }
     public IEnumerator GetHurt()
     {
+        DataManager.canAttackPlayer = false;
         animatorCtrl.GetComponentInChildren<Animator>().SetLayerWeight(1, 1);
         collider2D.enabled = false;
         yield return new WaitForSeconds(3);
+        DataManager.canAttackPlayer = true;
         animatorCtrl.GetComponentInChildren<Animator>().SetLayerWeight(1, 0);
         collider2D.enabled = true;
-        Debug.Log("gethurt");
     }
 }

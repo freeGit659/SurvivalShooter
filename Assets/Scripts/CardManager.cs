@@ -42,10 +42,11 @@ public class CardManager : MonoBehaviour
     }
     public IEnumerator ActivePanelCard()
     {
+        Time.timeScale = 1f;
         DataManager.canDo = false;
         panelCard.SetActive(true);
         yield return new WaitForSeconds(1f);
-        Time.timeScale = 0f;
         panelCard.SetActive(false);
+        Time.timeScale = 0f;
     }
 }

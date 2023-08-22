@@ -25,6 +25,8 @@ public class EnemyCtrl : MonoBehaviour
     void Update()
     {
         if (isDeath) return;
+        Death();
+        if (!DataManager.canAttackPlayer) return;
         Vector3 ranPos = new Vector3(Random.Range(0f, 3f), Random.Range(0f, 3f), 0);
         transform.position += (player.position - transform.position - ranPos) * Random.Range(0f, maxSpeed) * Time.deltaTime;
         if (timeFollow <= 0)
@@ -36,7 +38,7 @@ public class EnemyCtrl : MonoBehaviour
             timeFollow = Random.Range(1f, 2f);
         }
         timeFollow -= Time.deltaTime;
-        Death();
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

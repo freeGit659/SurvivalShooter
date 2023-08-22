@@ -15,13 +15,13 @@ public class DataManager : MonoBehaviour
     public static int playerHealth;
     public int playerHeal;
     public static bool canDo = true;
+    public static bool canAttackPlayer = true;
 
     void Start()
     {
-        score= 0;
-        playerHealth= playerCtrl.healthCtrl.GetMaxHealth();
         levelManager = GetComponentInChildren<LevelManager>();
         statsCtrl = GetComponentInChildren<StatsCtrl>();
+        ResetStaticVar();
     }
 
     // Update is called once per frame
@@ -35,6 +35,13 @@ public class DataManager : MonoBehaviour
     protected void SelectWeapon(string weapon)
     {
         weaponCtrl.ActiveWeapon(weapon);
+    }
+    private void ResetStaticVar()
+    {
+        score = 0;
+        playerHealth = playerCtrl.healthCtrl.GetMaxHealth();
+        canDo = true;
+        canAttackPlayer= true;
     }
 
 }
