@@ -6,6 +6,7 @@ public class DataManager : MonoBehaviour
 {
     public PlayerCtrl playerCtrl;
     [SerializeField] GameObject[] playerAnimation;
+    [SerializeField] LeaderBoardCtrl leaderBoardCtrl;
     public LevelScore levelScore;
     public WeaponCtrl weaponCtrl;
     public LevelManager levelManager;
@@ -18,8 +19,11 @@ public class DataManager : MonoBehaviour
     public static bool canDo = true;
     public static bool canAttackPlayer = true;
 
+    public float timeSendScore;
+
     void Start()
     {
+        timeSendScore = 1f;
         levelManager = GetComponentInChildren<LevelManager>();
         statsCtrl = GetComponentInChildren<StatsCtrl>();
         ResetStaticVar();
@@ -28,9 +32,19 @@ public class DataManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         m_score= score;
         playerCtrl.healthCtrl.SetHealth(playerHealth);
         playerHeal = playerHealth;
+        if (score >= 1)
+        {
+            timeSendScore -= Time.deltaTime;
+            if (timeSendScore < 0)
+            {
+                SendScore();
+                timeSendScore = 1f;
+            }
+        }      
     }
 
     protected void SelectWeapon(string weapon)
@@ -43,6 +57,10 @@ public class DataManager : MonoBehaviour
         playerHealth = playerCtrl.healthCtrl.GetMaxHealth();
         canDo = true;
         canAttackPlayer= true;
+    }
+    public void SendScore()
+    {
+        leaderBoardCtrl.SubmitScore();
     }
 
 }

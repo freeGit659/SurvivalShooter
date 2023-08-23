@@ -11,9 +11,8 @@ public class LevelScore : LevelManager
     // Start is called before the first frame update
     void Start()
     {
-        UpLevel();
-        ActiveCard();
         levelScore = 10;
+        UpLevel();
     }
 
     // Update is called once per frame
