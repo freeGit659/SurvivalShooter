@@ -11,11 +11,12 @@ public class StatsCtrl : MonoBehaviour
 
     [Header("Player Stats")]
     [Space(50)]
-    public float moveSpeed;
+    
     public int currentHP;
     public int maxHP;
-    public float fireSpeed;
     public float fireDamage;
+    public float fireSpeed;
+    public float moveSpeed;
     public static float FireDamage;
 
     void Start()

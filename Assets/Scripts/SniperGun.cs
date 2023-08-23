@@ -16,13 +16,13 @@ public class SniperGun : WeaponCtrl
     void Start()
     {
         shootingSound = GetComponentInChildren<AudioSource>();
-        timeFire = 3*(1/statsCtrl.fireSpeed);
+        timeFire = 1/statsCtrl.fireSpeed;
         statsCtrl.fireDamage = 100;
     }
     void Update()
     {
         if (!DataManager.canDo) return;
-        timeFire = 3*(1/statsCtrl.fireSpeed);
+        timeFire = 1/statsCtrl.fireSpeed;
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 lookDir = mousePos - transform.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
