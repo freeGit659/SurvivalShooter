@@ -790,11 +790,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 0}
   infomationText: "T\u0103ng s\xE1t th\u01B0\u01A1ng c\u1EE7a v\u0169 kh\xED ch\xEDnh
-    l\xEAn 20%"
+    l\xEAn 50%"
   sprite: {fileID: 21300000, guid: a59c8e1309f25064381623fb2e658f5c, type: 3}
   moveSpeed: 0
   fireSpeed: 0
-  fireDamage: 0
+  fireDamage: 50
   maxHP: 0
   currentHP: 0
 --- !u!1 &116523324
@@ -882,11 +882,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 0}
   infomationText: "T\u0103ng s\xE1t th\u01B0\u01A1ng c\u1EE7a v\u0169 kh\xED ch\xEDnh
-    th\xEAm 100%"
+    th\xEAm 50%"
   sprite: {fileID: 21300000, guid: a59c8e1309f25064381623fb2e658f5c, type: 3}
   moveSpeed: 0
   fireSpeed: 0
-  fireDamage: 100
+  fireDamage: 50
   maxHP: 0
   currentHP: 0
 --- !u!4 &119016282
@@ -1466,8 +1466,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70, y: -30}
-  m_SizeDelta: {x: 150, y: 60}
+  m_AnchoredPosition: {x: 98.322, y: -34.515}
+  m_SizeDelta: {x: 206.64, y: 69.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &196648360
 MonoBehaviour:
@@ -1587,9 +1587,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n th\xEAm "
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n th\xEAm 20%"
   sprite: {fileID: 21300000, guid: 7e3e4de797229324a8215e19abeaa37f, type: 3}
-  moveSpeed: 50
+  moveSpeed: 20
   fireSpeed: 0
   fireDamage: 0
   maxHP: 0
@@ -1766,9 +1766,9 @@ RectTransform:
   m_Father: {fileID: 1114860165}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -148}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 214, y: 296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &253867450
@@ -1914,7 +1914,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -22.600006}
+  m_AnchoredPosition: {x: 0, y: -22.599976}
   m_SizeDelta: {x: 234.73, y: 45.200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &273214072
@@ -2215,10 +2215,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm 20%"
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm 50%"
   sprite: {fileID: 21300000, guid: 9479158755cda8048b852508f4917506, type: 3}
   moveSpeed: 0
-  fireSpeed: 20
+  fireSpeed: 50
   fireDamage: 0
   maxHP: 0
   currentHP: 0
@@ -3117,10 +3117,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm "
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm 50%"
   sprite: {fileID: 21300000, guid: 771c5a6643b3e4245938611579594e61, type: 3}
   moveSpeed: 0
-  fireSpeed: 0
+  fireSpeed: 50
   fireDamage: 0
   maxHP: 0
   currentHP: 0
@@ -3169,10 +3169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm 10%"
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm 50%"
   sprite: {fileID: 21300000, guid: 9479158755cda8048b852508f4917506, type: 3}
   moveSpeed: 0
-  fireSpeed: 10
+  fireSpeed: 50
   fireDamage: 0
   maxHP: 0
   currentHP: 0
@@ -3651,10 +3651,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm 10%"
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm 50%"
   sprite: {fileID: 21300000, guid: 9479158755cda8048b852508f4917506, type: 3}
   moveSpeed: 0
-  fireSpeed: 10
+  fireSpeed: 50
   fireDamage: 0
   maxHP: 0
   currentHP: 0
@@ -3973,11 +3973,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 0}
   infomationText: "T\u0103ng s\xE1t th\u01B0\u01A1ng c\u1EE7a v\u0169 kh\xED ch\xEDnh
-    l\xEAn 20%"
+    l\xEAn 50%"
   sprite: {fileID: 21300000, guid: 3fb80ff70ee5b7f458bd8c6c0cf74f0b, type: 3}
   moveSpeed: 0
   fireSpeed: 0
-  fireDamage: 0
+  fireDamage: 50
   maxHP: 0
   currentHP: 0
 --- !u!1 &546986498
@@ -4057,7 +4057,7 @@ RectTransform:
   m_GameObject: {fileID: 569132653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 196587608}
@@ -4463,9 +4463,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n th\xEAm 10%"
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n th\xEAm 20%"
   sprite: {fileID: 21300000, guid: 094dca4f990f29f4c8d48302787612d0, type: 3}
-  moveSpeed: 10
+  moveSpeed: 20
   fireSpeed: 0
   fireDamage: 0
   maxHP: 0
@@ -4515,10 +4515,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm "
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm 50%"
   sprite: {fileID: 21300000, guid: 771c5a6643b3e4245938611579594e61, type: 3}
   moveSpeed: 0
-  fireSpeed: 0
+  fireSpeed: 50
   fireDamage: 0
   maxHP: 0
   currentHP: 0
@@ -4567,10 +4567,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm "
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm 50%"
   sprite: {fileID: 21300000, guid: 771c5a6643b3e4245938611579594e61, type: 3}
   moveSpeed: 0
-  fireSpeed: 0
+  fireSpeed: 50
   fireDamage: 0
   maxHP: 0
   currentHP: 0
@@ -4861,9 +4861,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n th\xEAm "
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n th\xEAm 20%"
   sprite: {fileID: 21300000, guid: 7e3e4de797229324a8215e19abeaa37f, type: 3}
-  moveSpeed: 50
+  moveSpeed: 20
   fireSpeed: 0
   fireDamage: 0
   maxHP: 0
@@ -4893,7 +4893,7 @@ RectTransform:
   m_GameObject: {fileID: 848904321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 77229390}
@@ -5092,7 +5092,7 @@ RectTransform:
   m_GameObject: {fileID: 892307096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 265361713}
@@ -5100,7 +5100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -33.167, y: -21.811005}
+  m_AnchoredPosition: {x: -192, y: -41}
   m_SizeDelta: {x: 168.4, y: 43.622}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892307098
@@ -5507,7 +5507,7 @@ RectTransform:
   m_GameObject: {fileID: 936487188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 885245531}
@@ -5699,7 +5699,7 @@ RectTransform:
   m_GameObject: {fileID: 961482701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1805946575}
@@ -6285,7 +6285,7 @@ RectTransform:
   m_GameObject: {fileID: 1108371033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1805946575}
@@ -6354,7 +6354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1114860165
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6364,7 +6364,7 @@ RectTransform:
   m_GameObject: {fileID: 1114860164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 253867449}
@@ -6431,7 +6431,7 @@ RectTransform:
   m_GameObject: {fileID: 1118655422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 168043482}
@@ -6801,9 +6801,9 @@ RectTransform:
   m_Father: {fileID: 1114860165}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -148}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 214, y: 296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214746822
@@ -10599,9 +10599,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n th\xEAm 10%"
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n th\xEAm 20%"
   sprite: {fileID: 21300000, guid: 094dca4f990f29f4c8d48302787612d0, type: 3}
-  moveSpeed: 10
+  moveSpeed: 20
   fireSpeed: 0
   fireDamage: 0
   maxHP: 0
@@ -10755,9 +10755,9 @@ RectTransform:
   m_Father: {fileID: 1114860165}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 590, y: -148}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 214, y: 296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1313881866
@@ -11114,7 +11114,7 @@ RectTransform:
   m_GameObject: {fileID: 1385762834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1463092867}
@@ -11787,9 +11787,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n th\xEAm "
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n th\xEAm 20%"
   sprite: {fileID: 21300000, guid: 094dca4f990f29f4c8d48302787612d0, type: 3}
-  moveSpeed: 50
+  moveSpeed: 20
   fireSpeed: 0
   fireDamage: 0
   maxHP: 0
@@ -11926,7 +11926,7 @@ RectTransform:
   m_GameObject: {fileID: 1592372806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1805946575}
@@ -12006,7 +12006,7 @@ RectTransform:
   m_GameObject: {fileID: 1630970230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1805946575}
@@ -12105,11 +12105,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 0}
   infomationText: "T\u0103ng s\xE1t th\u01B0\u01A1ng c\u1EE7a v\u0169 kh\xED ch\xEDnh
-    l\xEAn 20%"
+    l\xEAn 50%"
   sprite: {fileID: 21300000, guid: a59c8e1309f25064381623fb2e658f5c, type: 3}
   moveSpeed: 0
   fireSpeed: 0
-  fireDamage: 20
+  fireDamage: 50
   maxHP: 0
   currentHP: 0
 --- !u!1 &1652162413
@@ -12344,10 +12344,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm "
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 b\u1EAFn th\xEAm 50%"
   sprite: {fileID: 21300000, guid: 9479158755cda8048b852508f4917506, type: 3}
   moveSpeed: 0
-  fireSpeed: 0
+  fireSpeed: 50
   fireDamage: 0
   maxHP: 0
   currentHP: 0
@@ -12581,7 +12581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782853768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1, y: 19.3, z: 0}
+  m_LocalPosition: {x: 1.4, y: 22.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12644,8 +12644,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 322.69, y: 171.778}
-  m_SizeDelta: {x: -645.38, y: -343.556}
+  m_AnchoredPosition: {x: 823.77203, y: 438.8528}
+  m_SizeDelta: {x: -1647.544, y: -877.706}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1805946576
 MonoBehaviour:
@@ -12660,9 +12660,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 5
+    m_Left: 100
     m_Right: 0
-    m_Top: 5
+    m_Top: 20
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
@@ -12893,11 +12893,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 0}
   infomationText: "T\u0103ng s\xE1t th\u01B0\u01A1ng c\u1EE7a v\u0169 kh\xED ch\xEDnh
-    l\xEAn 20%"
+    l\xEAn 50%"
   sprite: {fileID: 21300000, guid: 3fb80ff70ee5b7f458bd8c6c0cf74f0b, type: 3}
   moveSpeed: 0
   fireSpeed: 0
-  fireDamage: 0
+  fireDamage: 50
   maxHP: 0
   currentHP: 0
 --- !u!1 &1874730655
@@ -13105,8 +13105,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 57.703003, y: 138.734}
-  m_SizeDelta: {x: 115.405, y: 89.132}
+  m_AnchoredPosition: {x: 86.372, y: 376.351}
+  m_SizeDelta: {x: 172.752, y: 213.317}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1896195987
 MonoBehaviour:
@@ -13121,11 +13121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 10
     m_Right: 0
-    m_Top: 0
+    m_Top: 20
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -13234,11 +13234,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 0}
   infomationText: "T\u0103ng s\xE1t th\u01B0\u01A1ng c\u1EE7a v\u0169 kh\xED ch\xEDnh
-    l\xEAn 10%"
+    l\xEAn 50%"
   sprite: {fileID: 21300000, guid: a59c8e1309f25064381623fb2e658f5c, type: 3}
   moveSpeed: 0
   fireSpeed: 0
-  fireDamage: 10
+  fireDamage: 50
   maxHP: 0
   currentHP: 0
 --- !u!1 &1924398121
@@ -13545,7 +13545,7 @@ RectTransform:
   m_GameObject: {fileID: 2016187411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1805946575}
@@ -13724,11 +13724,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 0}
   infomationText: "T\u0103ng s\xE1t th\u01B0\u01A1ng c\u1EE7a v\u0169 kh\xED ch\xEDnh
-    l\xEAn 20%"
+    l\xEAn 50%"
   sprite: {fileID: 21300000, guid: 3fb80ff70ee5b7f458bd8c6c0cf74f0b, type: 3}
   moveSpeed: 0
   fireSpeed: 0
-  fireDamage: 0
+  fireDamage: 50
   maxHP: 0
   currentHP: 0
 --- !u!1 &2020380043
@@ -13828,9 +13828,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
-  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n th\xEAm "
+  infomationText: "T\u0103ng t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n th\xEAm 20"
   sprite: {fileID: 21300000, guid: 7e3e4de797229324a8215e19abeaa37f, type: 3}
-  moveSpeed: 50
+  moveSpeed: 20
   fireSpeed: 0
   fireDamage: 0
   maxHP: 0
@@ -14015,7 +14015,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104934425}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 23.9, z: 0}
+  m_LocalPosition: {x: 1.2, y: 32.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14185,7 +14185,7 @@ RectTransform:
   m_GameObject: {fileID: 2136178741}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 265361713}
@@ -14193,7 +14193,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 104.389, y: -21.811005}
+  m_AnchoredPosition: {x: 79, y: -41}
   m_SizeDelta: {x: 96.342, y: 43.622}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2136178743
@@ -14265,7 +14265,7 @@ RectTransform:
   m_GameObject: {fileID: 2145923374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1805946575}
@@ -14303,13 +14303,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: RANK
+  m_Text: "\t\t\tRANK"
 --- !u!222 &2145923377
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -16,5 +16,10 @@ public class CameraCtrl : MonoBehaviour
     {
         Vector3 tagetPosition = taget.position + offset + new Vector3 ( 0, -5 , 0);
         transform.position = Vector3.SmoothDamp(transform.position, tagetPosition, ref velocity, smoothTime);
+        transform.position = new Vector3(
+            Mathf.Clamp(taget.position.x, -165f, 65f),
+            Mathf.Clamp(taget.position.y, -83, 115),
+                transform.position.z);
+        
     }
 }

@@ -29,5 +29,8 @@ public class PlayerMoving : MonoBehaviour
         playerCtrl.transform.position += input * speed * Time.deltaTime;
         if (Input.GetAxis("Horizontal") > 0f) animatorCtrl.transform.localScale = new Vector3(1,1,1);
         else if (Input.GetAxis("Horizontal") < 0f) animatorCtrl.transform.localScale = new Vector3(-1, 1, 1);
+        playerCtrl.transform.position = new Vector2(
+            Mathf.Clamp(playerCtrl.transform.position.x, -217f, 115f),
+            Mathf.Clamp(playerCtrl.transform.position.y, -103, 149));
     }
 }
