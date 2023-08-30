@@ -25,7 +25,7 @@ public class PlayerMoving : MonoBehaviour
     void Update()
     {
         if (!playerCtrl.IsOnSite) return;
-        input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+        input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0).normalized;
         playerCtrl.transform.position += input * speed * Time.deltaTime;
         if (Input.GetAxis("Horizontal") > 0f) animatorCtrl.transform.localScale = new Vector3(1,1,1);
         else if (Input.GetAxis("Horizontal") < 0f) animatorCtrl.transform.localScale = new Vector3(-1, 1, 1);

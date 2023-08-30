@@ -13,7 +13,7 @@ public class LeaderBoardCtrl : MonoBehaviour
     public int playerRank;
     public int id;
     int maxScores = 100;
-    float timeUpdate = 2;
+    float timeUpdate = 1;
 
     public Text[] Entries;
 
@@ -51,8 +51,9 @@ public class LeaderBoardCtrl : MonoBehaviour
         timeUpdate -= Time.deltaTime;
         if (timeUpdate < 0)
         {
+            if(playerScore >= 1) SubmitScore();
             Show();
-            timeUpdate = 2;
+            timeUpdate = 1;
         }
 
     }
@@ -73,8 +74,6 @@ public class LeaderBoardCtrl : MonoBehaviour
     }
     public void Show()
     {
-        int playerRankUp = playerRank - 1;
-        int playerRankDown = playerRank + 1;
         LootLockerSDKManager.GetScoreList("board", maxScores, (response) =>
         {
             if (response.success)
@@ -99,6 +98,7 @@ public class LeaderBoardCtrl : MonoBehaviour
                             if (playerRank == scores[i].rank) { Entries[i].color = Color.red; }
                             else { Entries[i].color = Color.black; }
                         }
+                        int playerRankUp = playerRank - 1;
                         Entries[3].text = ((playerRankUp) + ".  " + scores[playerRankUp - 1].member_id + " - " + scores[playerRankUp - 1].score);
                         Entries[3].color = Color.white;
                         Entries[4].text = (playerRank + ".  " + playerNameStr + " - " + scores[playerRank - 1].score);

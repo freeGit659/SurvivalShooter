@@ -17,6 +17,7 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private DataManager DataManager;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private GameObject gameOver;
+    [SerializeField] public SpaceSkillCtrl spaceSkillCtrl;
     Collider2D collider2D;
     Rigidbody2D rb;
 
@@ -26,6 +27,7 @@ public class PlayerCtrl : MonoBehaviour
         isOnSite= true;
         rb = GetComponent<Rigidbody2D>();  
         collider2D= GetComponent<Collider2D>();
+        spaceSkillCtrl= GetComponentInChildren<SpaceSkillCtrl>();
     }
 
     // Update is called once per frame

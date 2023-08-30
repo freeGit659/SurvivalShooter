@@ -55,6 +55,10 @@ public class EnemyCtrl : MonoBehaviour
         {
             DataManager.playerHealth -= 1;
         }
+        if (collision.gameObject.CompareTag("Boom"))
+        {
+            currentHP -= currentHP;
+        }
     }
     private void Death()
     {

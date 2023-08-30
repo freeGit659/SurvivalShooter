@@ -23,7 +23,7 @@ public class DataManager : MonoBehaviour
 
     void Start()
     {
-        timeSendScore = 1f;
+        timeSendScore = 0.5f;
         levelManager = GetComponentInChildren<LevelManager>();
         statsCtrl = GetComponentInChildren<StatsCtrl>();
         ResetStaticVar();
@@ -35,16 +35,7 @@ public class DataManager : MonoBehaviour
         
         m_score= score;
         playerCtrl.healthCtrl.SetHealth(playerHealth);
-        playerHeal = playerHealth;
-        if (score >= 1)
-        {
-            timeSendScore -= Time.deltaTime;
-            if (timeSendScore < 0)
-            {
-                SendScore();
-                timeSendScore = 1f;
-            }
-        }      
+        playerHeal = playerHealth;    
     }
 
     protected void SelectWeapon(string weapon)
@@ -58,9 +49,4 @@ public class DataManager : MonoBehaviour
         canDo = true;
         canAttackPlayer= true;
     }
-    public void SendScore()
-    {
-        leaderBoardCtrl.SubmitScore();
-    }
-
 }
