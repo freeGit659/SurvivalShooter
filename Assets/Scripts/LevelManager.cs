@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
 
     public int LevelCurrent
     {
-        get { return levelCurrent; }
+        get { return this.levelCurrent; }
     }
 
     void Start()
@@ -25,18 +25,18 @@ public class LevelManager : MonoBehaviour
 
     protected virtual void LevelLimited()
     {
-        if (this.levelCurrent < 0) this.levelCurrent = 0;
-        if( this.levelCurrent >= this.levelMax) this.levelCurrent = this.levelMax;
+        if (levelCurrent < 0) levelCurrent = 0;
+        if( levelCurrent >= levelMax) levelCurrent = levelMax;
     }
 
     public virtual void UpLevel()
     {
-        this.levelCurrent++;
+        levelCurrent++;
         LevelLimited();
     }
     public virtual void SetLevel(int newLevel)
     {
-        this.levelCurrent = newLevel;
+        levelCurrent = newLevel;
         LevelLimited();
     }
 }

@@ -13,6 +13,7 @@ public class InputNameCtrl : MonoBehaviour
     {
         InputField.SetActive(true);
         DataManager.canDo = false;
+
         Time.timeScale = 0f;
     }
     void Start()

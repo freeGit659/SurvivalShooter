@@ -6,21 +6,24 @@ public class BombManager : SpaceSkillCtrl
 {
     [SerializeField] private SpawnSkillCtr spawnSkillCtr;
     [SerializeField] protected BombSkillCountDownCtrl bombSkillCountDownCtrl;
+    public int damage;
 
 
     
     void Start()
     {
         spawnSkillCtr =GetComponentInChildren<SpawnSkillCtr>();
-        timeSkillcountDownCurrent = 0;
+        bombSkillCountDownCtrl = GetComponentInChildren<BombSkillCountDownCtrl>();
+        this.timeSkillcountDownCurrent = 0;
         icon.SetActive(true);
+        damage = 200;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!DataManager.canDo) return;
-        timeSkillcountDownCurrent -= Time.deltaTime;
+        this.timeSkillcountDownCurrent -= Time.deltaTime;
         TimeCountDownLimited();
         this.useSkill();    
     }
@@ -28,9 +31,17 @@ public class BombManager : SpaceSkillCtrl
     {
         if (Input.GetKeyUp(KeyCode.Space) && timeSkillcountDownCurrent == 0)
         {
-            spawnSkillCtr.Spawn();
-            bombSkillCountDownCtrl.ActiveBar(true);
-            timeSkillcountDownCurrent = timeSkillCountDownMax;
+            this.spawnSkillCtr.Spawn();
+            this.bombSkillCountDownCtrl.ActiveBar(true);
+            this.timeSkillcountDownCurrent = this.timeSkillCountDownMax;
+        }
+    }
+    public override void TimeCountDownLimited()
+    {
+        if (this.timeSkillcountDownCurrent <= 0)
+        {
+            this.timeSkillcountDownCurrent = 0;
+            this.bombSkillCountDownCtrl.ActiveBar(false);
         }
     }
 

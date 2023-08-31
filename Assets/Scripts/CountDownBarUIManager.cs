@@ -20,7 +20,7 @@ public class CountDownBarUIManager : MonoBehaviour
     public void UpdateBar(float currentValue, float maxValue)
     {
         fill.fillAmount = currentValue / maxValue;
-        timeCountDownText.text = currentValue.ToString();
+        timeCountDownText.text = ((int)currentValue).ToString();
     }
     public void ActiveBar(bool status)
     {

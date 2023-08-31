@@ -8,6 +8,7 @@ public class DashManager : SpaceSkillCtrl
     [SerializeField] float dashDuration;
     [SerializeField] float dashTime;
     [SerializeField] Transform player;
+    [SerializeField] DashSkillCountDownCtrl dashSkillCountDown;
     Rigidbody2D rb;
     Vector3 playerScreenPosition;
     Vector3 mouseScreenPosition;
@@ -21,6 +22,8 @@ public class DashManager : SpaceSkillCtrl
         canDash = true;
         isDashing= false;
         rb = player.GetComponent<Rigidbody2D>();
+        dashSkillCountDown = GetComponentInChildren<DashSkillCountDownCtrl>();
+        icon.SetActive(true);
     }
 
     
@@ -31,8 +34,9 @@ public class DashManager : SpaceSkillCtrl
 
         playerToMouseVector = (mouseScreenPosition - playerScreenPosition).normalized;
         if (!DataManager.canDo) return;
+        this.timeSkillcountDownCurrent -= Time.deltaTime;
+        this.TimeCountDownLimited();
         this.useSkill();
-        TimeCountDownLimited();
         
     }
 
@@ -44,7 +48,7 @@ public class DashManager : SpaceSkillCtrl
         yield return new WaitForSeconds(dashDuration);
         rb.velocity = new Vector2(0, 0);
         
-        yield return new WaitForSeconds(dashTime); 
+        yield return new WaitForSeconds(this.timeSkillCountDownMax); 
         isDashing = false;
     }
     public override void useSkill()
@@ -52,7 +56,16 @@ public class DashManager : SpaceSkillCtrl
         if (Input.GetKeyDown(KeyCode.Space) && !isDashing)
         {
             this.StartCoroutine(Dash());
-            timeSkillcountDownCurrent = timeSkillCountDownMax;
+            this.dashSkillCountDown.ActiveBar(true);
+            this.timeSkillcountDownCurrent = this.timeSkillCountDownMax;
+        }
+    }
+    public override void TimeCountDownLimited()
+    {
+        if (this.timeSkillcountDownCurrent <= 0)
+        {
+            this.timeSkillcountDownCurrent = 0;
+            this.dashSkillCountDown.ActiveBar(false);
         }
     }
 }

@@ -7,6 +7,7 @@ public class DataManager : MonoBehaviour
     public PlayerCtrl playerCtrl;
     [SerializeField] GameObject[] playerAnimation;
     [SerializeField] LeaderBoardCtrl leaderBoardCtrl;
+    public GameObject skillHubPanel;
     public LevelScore levelScore;
     public WeaponCtrl weaponCtrl;
     public LevelManager levelManager;

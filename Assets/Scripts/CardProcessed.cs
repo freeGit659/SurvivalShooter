@@ -42,6 +42,7 @@ public class CardProcessed : MonoBehaviour
                 break;
             case 2:
                 Level3SelectSkill(card);
+                cardManager.dataManager.skillHubPanel.SetActive(true);
                 break;
             default:
                 statsCtrl.moveSpeed += levelList.levels[levelCurrentIndex].cardCtrl[card].moveSpeed * (statsCtrl.moveSpeed / 100);

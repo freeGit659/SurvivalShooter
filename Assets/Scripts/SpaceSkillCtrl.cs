@@ -27,15 +27,14 @@ public class SpaceSkillCtrl : MonoBehaviour
 
     public void SetSkillForSpace(string skillStr)
     {
+        skillHub[0].SetActive(true);
         switch (skillStr)
         {
             case "Bomb":
                 skill[0].SetActive(true);
-                skillHub[0].SetActive(true);
                 break;
             case "Dash":
                 skill[1].SetActive(true);
-                skillHub[1].SetActive(true);
                 break;
         }
     }
@@ -43,11 +42,15 @@ public class SpaceSkillCtrl : MonoBehaviour
     {
             timeSkillcountDownCurrent = timeSkillCountDownMax;
     }
-    public void TimeCountDownLimited()
+    public virtual void TimeCountDownLimited()
     {
         if (timeSkillcountDownCurrent <= 0)
         {
             timeSkillcountDownCurrent = 0;
         }
+    }
+    public virtual void CanUseSkill()
+    {
+
     }
 }
