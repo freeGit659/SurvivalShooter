@@ -51,7 +51,6 @@ MonoBehaviour:
   an: {fileID: 0}
   col: {fileID: 0}
   audio: {fileID: 0}
-  shakeCtrl: {fileID: 0}
 --- !u!95 &3217233529859888393
 Animator:
   serializedVersion: 5
@@ -138,9 +137,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.16988754, y: 5.1392517}
+  m_Offset: {x: -0.79, y: 10.11}
   serializedVersion: 2
-  m_Radius: 8.833733
+  m_Radius: 20.41
 --- !u!82 &7621518697400170418
 AudioSource:
   m_ObjectHideFlags: 0

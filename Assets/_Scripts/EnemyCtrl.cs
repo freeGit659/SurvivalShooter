@@ -22,13 +22,15 @@ public class EnemyCtrl : MonoBehaviour
         timeFollow = 0;
         an = GetComponent<Animator>();
         isDeath = false;
-        currentHP = maxHP;
+        currentHP = maxHP + 10*DataManager.level;
         blood.SetActive(false);
     }
 
     void Update()
     {
         if (isDeath) return;
+        if (DataManager.statusDayNight == "day") maxSpeed = 0.3f;
+        else if (DataManager.statusDayNight == "night") maxSpeed = 0.5f;
         Death();
         if (!DataManager.canAttackPlayer)
         {

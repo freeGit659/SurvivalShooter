@@ -41,7 +41,7 @@ public class SpaceSkillCtrl : MonoBehaviour
             case "Dash":
                 skill[1].SetActive(true);
                 break;
-            case "Invesible":
+            case "Invisible":
                 skill[2].SetActive(true);
                 break;
         }

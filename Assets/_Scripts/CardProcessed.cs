@@ -79,7 +79,7 @@ public class CardProcessed : MonoBehaviour
                 cardManager.dataManager.playerCtrl.spaceSkillCtrl.SetSkillForSpace("Dash");
                 break;
             case 2:
-                cardManager.dataManager.playerCtrl.spaceSkillCtrl.SetSkillForSpace("Invesible");
+                cardManager.dataManager.playerCtrl.spaceSkillCtrl.SetSkillForSpace("Invisible");
                 break;
         }
     }

@@ -33,7 +33,7 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DataManager.canDo == false) return;
+        if (!DataManager.canDo) return;
         if (weaponManager.activeSelf)
         {
             animatorCtrl.transform.GetChild(0).gameObject.SetActive(false);

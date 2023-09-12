@@ -32,7 +32,7 @@ public class SkillSpaceInfomation : MonoBehaviour
     }
     void SetInfomationForBomb()
     {
-        infomation = "Bomb: Đặt một quả bomb trên mặt đất. Quả bomb phát nổ sau " + bombManager.TimeSkillCountDownMax + " giây, đẩy lùi và gây " + bombManager.damage + " sát thương";
+        infomation = "Bomb: Đặt một quả bomb trên mặt đất. Quả bomb phát nổ sau 2 giây, đẩy lùi và gây " + bombManager.damage + " sát thương";
         timeCountDownInfomation = bombManager.TimeSkillCountDownMax;
     }
     void SetInfomationForDash()

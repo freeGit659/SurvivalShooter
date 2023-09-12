@@ -7,6 +7,7 @@ public class DataManager : MonoBehaviour
     public PlayerCtrl playerCtrl;
     [SerializeField] GameObject[] playerAnimation;
     [SerializeField] LeaderBoardCtrl leaderBoardCtrl;
+    [SerializeField] Light2DManager light2DManager;
     public GameObject skillHubPanel;
     public LevelScore levelScore;
     public WeaponCtrl weaponCtrl;
@@ -19,6 +20,8 @@ public class DataManager : MonoBehaviour
     public static int playerHealth;
     public static bool canDo = true;
     public static bool canAttackPlayer = true;
+    public static string statusDayNight;
+    public static int level;
 
     public float timeSendScore;
 
@@ -35,8 +38,10 @@ public class DataManager : MonoBehaviour
     {
         
         m_score= score;
+        level = levelScore.levelCurrentByScore;
         playerCtrl.healthCtrl.SetHealth(playerHealth);
-        playerHeal = playerHealth;    
+        playerHeal = playerHealth;
+        statusDayNight = light2DManager.status;
     }
 
     protected void SelectWeapon(string weapon)

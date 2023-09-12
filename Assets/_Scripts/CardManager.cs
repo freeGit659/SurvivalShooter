@@ -27,7 +27,8 @@ public class CardManager : MonoBehaviour
         cardCanvas.SetActive(false);
         Time.timeScale = 1.0f;
         DataManager.canDo = true;
-        
+        DataManager.canAttackPlayer = true;
+
     }
    public void CardCalled()
     {
@@ -44,9 +45,9 @@ public class CardManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         DataManager.canDo = false;
+        DataManager.canAttackPlayer = false;
         panelCard.SetActive(true);
         yield return new WaitForSeconds(1f);
         panelCard.SetActive(false);
-        Time.timeScale = 0f;
     }
 }

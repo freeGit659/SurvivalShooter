@@ -37,19 +37,19 @@ public class WeaponCtrl : MonoBehaviour
                 weapons[0].SetActive(true);
                 weapons[1].SetActive(false);
                 weapons[2].SetActive(false);
-                statsCtrl.fireSpeed = 1;
+                statsCtrl.fireSpeed = 2f;
                 break;
             case "shootgun":
                 weapons[0].SetActive(false);
                 weapons[1].SetActive(true);
                 weapons[2].SetActive(false);
-                statsCtrl.fireSpeed = 0.5f;
+                statsCtrl.fireSpeed = 1f;
                 break;
             case "sniper":
                 weapons[0].SetActive(false);
                 weapons[1].SetActive(false);
                 weapons[2].SetActive(true);
-                statsCtrl.fireSpeed = 0.3f;
+                statsCtrl.fireSpeed = 0.5f;
                 break;
         }
     }

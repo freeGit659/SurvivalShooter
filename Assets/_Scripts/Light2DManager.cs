@@ -11,13 +11,14 @@ public class Light2DManager : MonoBehaviour
     [SerializeField] Text statusText;
     [SerializeField] GameObject dayNightCanvas;
     [SerializeField] SunCtrl sunCtrl;
-    private const float REAL_SECONDS_PER_INGAME_DAY = 60f;
+    private const float REAL_SECONDS_PER_INGAME_DAY = 120f;
     private const float HOUR_PERDAY = 24f;
     private const float MINUS_PERHOUR = 60f;
     private float eighteenOclock = 18f;
     private float sixOclock = 6f;
     private float day;
-    private string status;
+    public string status;
+    public bool waiting;
     void Start()
     {
        SetTimeBegin();
@@ -27,6 +28,7 @@ public class Light2DManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(waiting) { return; }
         day += Time.deltaTime / REAL_SECONDS_PER_INGAME_DAY;
         if (day >= 1) day= 0;
         float dayNormalized = day % 1f;

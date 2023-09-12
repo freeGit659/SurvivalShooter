@@ -17,7 +17,7 @@ public class SniperGun : WeaponCtrl
     {
         shootingSound = GetComponentInChildren<AudioSource>();
         timeFire = 1/statsCtrl.fireSpeed;
-        statsCtrl.fireDamage = 50;
+        statsCtrl.fireDamage = 100;
     }
     void Update()
     {

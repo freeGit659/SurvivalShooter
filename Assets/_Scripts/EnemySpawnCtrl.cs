@@ -8,6 +8,7 @@ public class EnemySpawnCtrl : MonoBehaviour
     [SerializeField] GameObject effectSpawn;
     [SerializeField] PlayerCtrl player;
     [SerializeField] float timeSpawn;
+    [SerializeField] LevelScore levelScore;
     private float timeEffect = 0.5f;
     private float _timeSpawn;
     [SerializeField] float numSpawn;
@@ -19,6 +20,7 @@ public class EnemySpawnCtrl : MonoBehaviour
 
     void Update()
     {
+        if(!DataManager.canAttackPlayer) return;
        if(_timeSpawn <= 0)
        {
             if (_numSpawn >= 1)
@@ -29,7 +31,8 @@ public class EnemySpawnCtrl : MonoBehaviour
             else
             {
                 _timeSpawn = timeSpawn;
-                numSpawn = numSpawn + 0.2f;
+                if(DataManager.statusDayNight == "day") numSpawn = levelScore.levelCurrentByScore;
+                else if(DataManager.statusDayNight =="night") numSpawn = 1.5f*levelScore.levelCurrentByScore;
                 _numSpawn = numSpawn;
             }
                 

@@ -24,6 +24,7 @@ public class PlayerMoving : MonoBehaviour
 
     void Update()
     {
+        if (!DataManager.canDo) return;
         if (!playerCtrl.IsOnSite) return;
         input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0).normalized;
         playerCtrl.transform.position += input * speed * Time.deltaTime;
