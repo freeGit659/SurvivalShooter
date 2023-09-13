@@ -37,8 +37,7 @@ public class SniperGun : WeaponCtrl
         _timeFire -= Time.deltaTime;
         if (Input.GetMouseButton(0) && _timeFire < 0)
         {
-            DefaultFire(this.bullet, this.firePosition, this.bulletMagazine,
-                this.muzzle, this.transform, this.shootingSound, this.shakeCtrl);
+            StartCoroutine(DefaultFire(this.bullet, this.firePosition, this.bulletMagazine, this.muzzle, this.transform, this.shootingSound, this.shakeCtrl));
             _timeFire = timeFire;
         }
     }

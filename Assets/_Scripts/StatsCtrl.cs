@@ -30,5 +30,6 @@ public class StatsCtrl : MonoBehaviour
     {
         movingCtrl.Speed= moveSpeed;
         FireDamage = fireDamage;
+        healthCtr.CurrentHealth = currentHP;
     }
 }

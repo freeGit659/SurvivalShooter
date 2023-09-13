@@ -18,6 +18,7 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private GameObject gameOver;
     [SerializeField] public SkillCtrl spaceSkillCtrl;
+    [SerializeField] StatsCtrl statsCtrl;
     Collider2D collider2D;
     Rigidbody2D rb;
 
@@ -65,6 +66,7 @@ public class PlayerCtrl : MonoBehaviour
     }
     public IEnumerator GetHurt(float time)
     {
+        statsCtrl.currentHP--;
         DataManager.canAttackPlayer = false;
         animatorCtrl.GetComponentInChildren<Animator>().SetLayerWeight(1, 1);
         collider2D.enabled = false;

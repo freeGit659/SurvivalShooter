@@ -15,19 +15,19 @@ public class WeaponCtrl : MonoBehaviour
     {
 
     }
-    protected virtual void DefaultFire(GameObject bullet, Transform[] firePosition, Transform bulletMagazine, 
+    protected virtual IEnumerator DefaultFire(GameObject bullet, Transform[] firePosition, Transform bulletMagazine, 
         GameObject muzzle, Transform gunTransfrom, AudioSource shootingSound, ShakeCtrl shakeCtrl )
     {
-        if (!DataManager.canDo) return;
+        muzzle.SetActive(true);
         shootingSound.Play();
 
         shakeCtrl.LowShake();
         foreach(Transform pos in firePosition)
         {
             GameObject bulletTmp = Instantiate(bullet, pos.position, pos.rotation, bulletMagazine);
-        } 
-        //Instantiate(muzzle, pos[].position, transform.rotation, transform);
-;
+        }
+        yield return new WaitForSeconds(0.2f);
+        muzzle.SetActive(false);
     }
     public void ActiveWeapon(string input)
     {

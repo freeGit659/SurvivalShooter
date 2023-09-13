@@ -63,10 +63,10 @@ public class EnemyCtrl : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (isDeath) return;
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            DataManager.playerHealth -= 1;
-        }
+        //if (collision.gameObject.CompareTag("Player"))
+        //{
+        //    DataManager.playerHealth -= 1;
+        //}
         if (collision.gameObject.CompareTag("Boom"))
         {
             currentHP -= currentHP;
