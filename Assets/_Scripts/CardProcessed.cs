@@ -40,10 +40,6 @@ public class CardProcessed : MonoBehaviour
             case 0:
                 Level1SelectWeapon(card);
                 break;
-            case 2:
-                Level3SelectSkill(card);
-                cardManager.dataManager.skillHubPanel.SetActive(true);
-                break;
             default:
                 statsCtrl.moveSpeed += levelList.levels[levelCurrentIndex].cardCtrl[card].moveSpeed * (statsCtrl.moveSpeed / 100);
                 statsCtrl.fireSpeed += levelList.levels[levelCurrentIndex].cardCtrl[card].fireSpeed * (statsCtrl.fireSpeed / 100);
@@ -65,21 +61,6 @@ public class CardProcessed : MonoBehaviour
                 break;
             case 2:
                 cardManager.dataManager.weaponCtrl.ActiveWeapon("sniper");
-                break;
-        }
-    }
-    private void Level3SelectSkill(int card)
-    {
-        switch (card)
-        {
-            case 0:
-                cardManager.dataManager.playerCtrl.spaceSkillCtrl.SetSkillForSpace("Bomb");
-                break;
-            case 1:
-                cardManager.dataManager.playerCtrl.spaceSkillCtrl.SetSkillForSpace("Dash");
-                break;
-            case 2:
-                cardManager.dataManager.playerCtrl.spaceSkillCtrl.SetSkillForSpace("Invisible");
                 break;
         }
     }

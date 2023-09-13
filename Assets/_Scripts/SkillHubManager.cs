@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class SkillHubManager : MonoBehaviour
 {
-    [SerializeField] protected InfomationSkillCtrl infomationSkillCtrl;
+    [SerializeField] protected InfomationSkillHubCtrl infomationSkillHubCtrl;
+    [SerializeField] protected SkilInfomation skillInfomation;
     void Start()
     {
         
@@ -16,18 +17,33 @@ public class SkillHubManager : MonoBehaviour
     }
     public void SetActiveInfomationPanel()
     {
-        infomationSkillCtrl.gameObject.SetActive(true);
+        infomationSkillHubCtrl.gameObject.SetActive(true);
     }
     public void SetUnActiveInfomationPanel()
     {
-        infomationSkillCtrl.gameObject.SetActive(false);
+        infomationSkillHubCtrl.gameObject.SetActive(false);
     }
-    public void SetInfomationText(string content)
+    public void SetInfomationText()
     {
-        this.infomationSkillCtrl.skillInformation.text = content;
+        this.infomationSkillHubCtrl.skillInformation.text = skillInfomation.infomation;
     }
-    public void SetSkillCountDownText(float countDown)
+    public void SetSkillCountDownText()
     {
-        this.infomationSkillCtrl.skillCountDown.text = "Hồi chiêu: " + countDown.ToString() + " giây";
+        this.infomationSkillHubCtrl.skillCountDown.text = "Hồi chiêu: " + skillInfomation.timeCountDownInfomation.ToString() + " giây";
+    }
+    public void SetIndexSkill( int skillIndex)
+    {
+        switch (skillIndex)
+        {
+            case 0:
+                this.skillInfomation.SetInfomationForBomb();
+                break;
+            case 1:
+                this.skillInfomation.SetInfomationForDash();
+                break;
+            case 2:
+                this.skillInfomation.SetInfomationForInvisble();
+                break;
+        }
     }
 }

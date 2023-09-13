@@ -10,6 +10,7 @@ public class LevelScore : LevelManager
     
     [SerializeField] protected CardManager cardManager;
     [SerializeField]Text levelScoreText;
+    [SerializeField] SkillCtrl skillCtrl;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +26,24 @@ public class LevelScore : LevelManager
         {
             levelScore *= 2;
             this.UpLevel();
-            ActiveCard();
             this.levelCurrentByScore++;
+            switch (this.levelCurrentByScore)
+            {
+                case 3:
+                    cardManager.dataManager.skillHubPanel.SetActive(true);
+                    skillCtrl.SetSkillFromLevel(1);
+                    break;
+                case 5:
+                    skillCtrl.SetSkillFromLevel(0);
+                    break;
+                case 8:
+                    skillCtrl.SetSkillFromLevel(2);
+                    break;
+                default:
+                    ActiveCard();
+                    break;
+
+            }      
         }
         levelScoreText.text = "/" + levelScore;
     }

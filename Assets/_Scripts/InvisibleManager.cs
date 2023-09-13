@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InvisibleManager : SpaceSkillCtrl
+public class InvisibleManager : SkillCtrl
 {
     [SerializeField] protected PlayerCtrl playerCtrl;
     [SerializeField] protected InvisibleSkillCountDownCtr invisibleSkillCountDownCtrl;
@@ -17,7 +17,6 @@ public class InvisibleManager : SpaceSkillCtrl
     {
         invisibleSkillCountDownCtrl = GetComponentInChildren<InvisibleSkillCountDownCtr>();
         this.timeSkillcountDownCurrent = 0;
-        icon.SetActive(true);
     }
 
     
@@ -30,7 +29,7 @@ public class InvisibleManager : SpaceSkillCtrl
     }
     public override void useSkill()
     {
-        if (Input.GetKeyUp(KeyCode.Space) && timeSkillcountDownCurrent == 0)
+        if (Input.GetKeyUp(KeyCode.R) && timeSkillcountDownCurrent == 0)
         {
             StartCoroutine(playerCtrl.GetHurt(timeInvesible));
             this.invisibleSkillCountDownCtrl.ActiveBar(true);

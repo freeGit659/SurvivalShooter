@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DashManager : SpaceSkillCtrl
+public class DashManager : SkillCtrl
 {
     [SerializeField] float dashSpeed;
     [SerializeField] float dashDuration;
@@ -24,7 +24,6 @@ public class DashManager : SpaceSkillCtrl
         isDashing= false;
         rb = player.GetComponent<Rigidbody2D>();
         dashSkillCountDown = GetComponentInChildren<DashSkillCountDownCtrl>();
-        icon.SetActive(true);
     }
 
     

@@ -37,7 +37,6 @@ public class Light2DManager : MonoBehaviour
         string hoursString = hours.ToString("00");
         string minusString = minus.ToString("00");
         timeText.text = hoursString + ":" + minusString;
-        Debug.Log("time:" +day);
         SetStatus();
     }
     public void InDayTime()

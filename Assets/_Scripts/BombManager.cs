@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombManager : SpaceSkillCtrl
+public class BombManager : SkillCtrl
 {
     [SerializeField] private SpawnSkillCtr spawnSkillCtr;
     [SerializeField] protected BombSkillCountDownCtrl bombSkillCountDownCtrl;
@@ -15,7 +15,6 @@ public class BombManager : SpaceSkillCtrl
         spawnSkillCtr =GetComponentInChildren<SpawnSkillCtr>();
         bombSkillCountDownCtrl = GetComponentInChildren<BombSkillCountDownCtrl>();
         this.timeSkillcountDownCurrent = 0;
-        icon.SetActive(true);
         damage = 200;
     }
 
@@ -29,7 +28,7 @@ public class BombManager : SpaceSkillCtrl
     }
     public override void useSkill()
     {
-        if (Input.GetKeyUp(KeyCode.Space) && timeSkillcountDownCurrent == 0)
+        if (Input.GetKeyUp(KeyCode.Q) && timeSkillcountDownCurrent == 0)
         {
             this.spawnSkillCtr.Spawn();
             this.bombSkillCountDownCtrl.ActiveBar(true);
